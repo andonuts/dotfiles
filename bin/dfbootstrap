@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# NOTES
+# at present, script assumes git installed
+
+git clone https://github.com/andonuts/dotfiles.git ~/.dotfiles
+ln -s $(find ~/.dotfiles/dotfiles/ -type f) ~/
