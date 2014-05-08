@@ -65,7 +65,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 if [[ $platform == 'appleunix' ]]; then
-    plugins=(git virtualenv)
+    plugins=(git virtualenv brew)
 elif [[ $platform == 'linux' ]]; then
     plugins=(git virtualenv)
 fi
@@ -121,6 +121,8 @@ function status() {
 	echo -e "Battery status not yet implemented for Linux."
     fi
 }
+
+PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
 
 #functions or other commands to be run before the user is given a prompt
 sleep 1
